@@ -45,8 +45,8 @@ $hash = $signature->generate($hmacKey, $params);
 ```
 Validate a hash
 ```php
-$signature = new Signature();
-$hash = $signature->validate($hmacKey, $signature, $params);
+$signature = new Signature($hmacKey);
+$hash = $signature->validate($signature, $params);
 ```
 
 # Testing
