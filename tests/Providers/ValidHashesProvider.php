@@ -8,7 +8,7 @@ class ValidHashesProvider
     {
         return [
            ['Qeft2NQVCBnIYWXOkNT9Lkcs6gV4To6M9wktDPEypX8=', 'F00B44', ['test' => 'test']],
-           ['F4EeBbhTP8Kc6DxyEK9RfcoHfUMyr5SDlHF+fw2OVwk=', 'F00B44', ['test' => 'test', 'blank' => '']],
+           ['Qeft2NQVCBnIYWXOkNT9Lkcs6gV4To6M9wktDPEypX8=', 'F00B44', ['test' => 'test', 'blank' => '']],
         ];
     }
 
@@ -19,7 +19,7 @@ class ValidHashesProvider
                 'test' => 'test',
                 'merchantSig' => 'hello world',
             ]],
-            ['F4EeBbhTP8Kc6DxyEK9RfcoHfUMyr5SDlHF+fw2OVwk=', 'F00B44', [
+            ['Qeft2NQVCBnIYWXOkNT9Lkcs6gV4To6M9wktDPEypX8=', 'F00B44', [
                 'test' => 'test',
                 'merchantSig' => 'hello world',
                 'blank' => '',
