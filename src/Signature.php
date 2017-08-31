@@ -14,4 +14,16 @@ class Signature
     {
         return adyen_hmac($hmacKey, $params);
     }
+
+    /**
+     * @param string $hmacKey
+     * @param string $signature
+     * @param string[] $params
+     *
+     * @return bool
+     */
+    public function validate($hmacKey, $signature, $params)
+    {
+        return $signature === $this->generate($hmacKey, $params);
+    }
 }

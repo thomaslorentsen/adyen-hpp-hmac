@@ -7,7 +7,7 @@ class ValidHashesProvider
     public static function hashes()
     {
         return [
-           ['F00B44', ['test' => 'test']]
+           ['Qeft2NQVCBnIYWXOkNT9Lkcs6gV4To6M9wktDPEypX8=', 'F00B44', ['test' => 'test']]
         ];
     }
 
