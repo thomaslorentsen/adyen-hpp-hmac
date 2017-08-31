@@ -80,6 +80,20 @@ class SignatureTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
+     * @param string $signature
+     * @param string $key
+     * @param array $params
+     *
+     * @dataProvider \Test\Providers\ValidHashesProvider::unfilteredHashes()
+     */
+    public function testParamsAreFiltered($signature, $key, $params)
+    {
+        $this->create($key);
+        $result = $this->signature->validate($signature, $params);
+        $this->assertTrue($result);
+    }
+
+    /**
      * @param $key
      */
     private function create($key)
