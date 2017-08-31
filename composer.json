@@ -1,7 +1,7 @@
 {
   "name": "thomaslorentsen/adyen-hpp-hmac",
   "description": "HMAC Generator for Adyen Hosted Payment Pages",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "library",
   "license": "MIT",
   "authors": [
