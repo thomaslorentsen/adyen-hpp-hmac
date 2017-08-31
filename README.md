@@ -1,20 +1,13 @@
 [![Build Status](https://travis-ci.org/thomaslorentsen/adyen-hpp-hmac.svg?branch=master)](https://travis-ci.org/thomaslorentsen/adyen-hpp-hmac)
+[![Packagist](https://img.shields.io/packagist/v/thomaslorentsen/adyen-hpp-hmac.svg)](https://packagist.org/packages/thomaslorentsen/adyen-hpp-hmac)
 
 # Adyen HHP HMAC Generator
 HMAC Generator for Adyen Hosted Payment Pages
 
 # Installation
-Add the following to your composer config
-```json
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/thomaslorentsen/adyen-hpp-hmac"
-    }
-  ],
-  "require": {
-    "thomaslorentsen/adyen-hpp-hmac": "dev-master"
-  }
+Install with composer
+```bash
+composer require thomaslorentsen/adyen-hpp-hmac
 ```
 
 ## Usage
