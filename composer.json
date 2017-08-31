@@ -1,7 +1,7 @@
 {
   "name": "thomaslorentsen/adyen-hpp-hmac",
   "description": "HMAC Generator for Adyen Hosted Payment Pages",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -14,5 +14,16 @@
   "require": {},
   "require-dev": {
     "phpunit/phpunit": "^4.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "RoundPartner\\Adyen\\": "src/"
+    },
+    "files": ["src/hmac.php"]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\": "tests/"
+    }
   }
 }

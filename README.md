@@ -34,3 +34,8 @@ $params = [
 ];
 adyen_hmac($hmacKey, $params);
 ```
+
+# Testing
+```bash
+vendor/bin/phpunit
+```
