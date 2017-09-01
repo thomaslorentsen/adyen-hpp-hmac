@@ -49,6 +49,16 @@ class Signature
         if (!array_key_exists('merchantSig', $params)) {
             return $params;
         }
+        if (!defined('ARRAY_FILTER_USE_KEY')) {
+            $filteredParams = array();
+            foreach ($params as $key => $value) {
+                if ('merchantSig' === $key) {
+                    continue;
+                }
+                $filteredParams[$key] = $value;
+            }
+            return $filteredParams;
+        }
         return array_filter($params, function($key) { return 'merchantSig' !== $key; }, ARRAY_FILTER_USE_KEY);
     }
 }
