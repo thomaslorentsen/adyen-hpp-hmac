@@ -36,7 +36,7 @@ class Signature
      */
     public function validate($signature, $params)
     {
-        return $signature === $this->generate($params);
+        return hash_equals($this->generate($params), $signature);
     }
 
     /**
