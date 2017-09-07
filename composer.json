@@ -16,7 +16,7 @@
       "url": "https://github.com/thomaslorentsen/php-future"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
       "RoundPartner\\Adyen\\": "src/"
