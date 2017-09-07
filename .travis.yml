@@ -14,6 +14,7 @@ before_script:
 
 install:
   - composer install
+  - composer require php-coveralls/php-coveralls
 
 script:
   - vendor/bin/phpunit
