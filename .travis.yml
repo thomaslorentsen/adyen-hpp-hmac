@@ -14,13 +14,12 @@ before_script:
 
 install:
   - composer install
-  - composer require php-coveralls/php-coveralls
 
 script:
   - vendor/bin/phpunit
   
 after_success:
+  - composer require php-coveralls/php-coveralls
   - mkdir -p build/logs
   - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-  - travis_retry php vendor/bin/coveralls
 ...
