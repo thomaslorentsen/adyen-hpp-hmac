@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/thomaslorentsen/adyen-hpp-hmac.svg?branch=master)](https://travis-ci.org/thomaslorentsen/adyen-hpp-hmac)
 [![Packagist](https://img.shields.io/packagist/v/thomaslorentsen/adyen-hpp-hmac.svg)](https://packagist.org/packages/thomaslorentsen/adyen-hpp-hmac)
+[![Coverage Status](https://coveralls.io/repos/github/thomaslorentsen/adyen-hpp-hmac/badge.svg?branch=master)](https://coveralls.io/github/thomaslorentsen/adyen-hpp-hmac?branch=master)
 
 # Adyen HHP HMAC Generator
 HMAC Generator for Adyen Hosted Payment Pages
