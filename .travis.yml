@@ -9,6 +9,10 @@ php:
   - '5.6'
   - '7.0'
 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y tree
+
 install:
   - composer install
   - composer require php-coveralls/php-coveralls
