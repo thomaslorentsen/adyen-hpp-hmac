@@ -22,6 +22,7 @@ script:
   - vendor/bin/phpunit -c phpunit.xml.dist
   
 after_success:
-  - tree
+  - cat build/cov/coverage.cov
   - travis_retry php vendor/bin/coveralls
+  - tree
 ...
