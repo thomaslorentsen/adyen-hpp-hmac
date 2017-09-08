@@ -12,7 +12,7 @@ php:
 install:
   - composer install
   - composer require php-coveralls/php-coveralls
-  - mkdir -p build/logs
+  - mkdir -p build/logs build/cov
 
 script:
   - vendor/bin/phpunit -c phpunit.xml.dist
