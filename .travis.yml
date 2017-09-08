@@ -18,5 +18,6 @@ script:
   - vendor/bin/phpunit -c phpunit.xml.dist
   
 after_success:
+  - tree
   - travis_retry php vendor/bin/coveralls
 ...
