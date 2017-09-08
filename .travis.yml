@@ -17,9 +17,11 @@ install:
 
 script:
   - vendor/bin/phpunit
-  
-after_success:
+
+after_script:
   - composer require php-coveralls/php-coveralls
   - mkdir -p build/logs
+
+after_success:
   - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 ...
