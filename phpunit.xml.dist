@@ -18,5 +18,11 @@
   <logging>
     <log type="coverage-php" target="build/cov/coverage.cov"/>
   </logging>
+  
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+        <directory suffix=".php">./src</directory>
+    </whitelist>
+</filter>
 
 </phpunit>
