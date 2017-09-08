@@ -11,12 +11,12 @@ php:
 
 install:
   - composer install
-
-script:
-  - vendor/bin/phpunit
-
-after_success:
   - composer require php-coveralls/php-coveralls
   - mkdir -p build/logs
-  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+script:
+  - vendor/bin/phpunit -c phpunit.xml.dist
+  
+after_success:
+  - travis_retry php vendor/bin/coveralls
 ...
