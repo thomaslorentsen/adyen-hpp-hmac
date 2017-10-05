@@ -8,6 +8,21 @@
  */
 function adyen_hmac($hmacKey, $params)
 {
+    $signData = adyen_hmac_sign_string($params);
+
+    // base64-encode the binary result of the HMAC computation
+    $merchantSig = base64_encode(hash_hmac('sha256', $signData,pack("H*" , $hmacKey),true));
+
+    return $merchantSig;
+}
+
+/**
+ * @param array $params
+ *
+ * @return string
+ */
+function adyen_hmac_sign_string($params)
+{
     // The character escape function
     $escapeval = function($val) {
         return str_replace(':','\\:',str_replace('\\','\\\\',$val));
@@ -17,10 +32,7 @@ function adyen_hmac($hmacKey, $params)
     ksort($params, SORT_STRING);
 
     // Generate the signing data string
-    $signData = implode(":",array_map($escapeval,array_merge(array_keys($params), array_values($params))));
+    $signData = implode(":", array_map($escapeval, array_merge(array_keys($params), array_values($params))));
 
-    // base64-encode the binary result of the HMAC computation
-    $merchantSig = base64_encode(hash_hmac('sha256',$signData,pack("H*" , $hmacKey),true));
-
-    return $merchantSig;
+    return $signData;
 }
